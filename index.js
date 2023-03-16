@@ -20,3 +20,4 @@ client.on("ready", () => {
         }]
     });
 });
+client.login({clientId: ID}).catch(console.error);
