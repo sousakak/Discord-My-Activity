@@ -1,4 +1,6 @@
+require('dotenv').config();
 var discord_rpc = require("discord-rpc")
+var ID = process.env.CLIENTID
 const client = new discord_rpc.Client({
     transport: 'ipc'
 })
