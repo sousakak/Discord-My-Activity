@@ -1,4 +1,6 @@
+require('dotenv').config();
 var discord_rpc = require("discord-rpc")
+var ID = process.env.CLIENTID
 const client = new discord_rpc.Client({
     transport: 'ipc'
 })
@@ -18,4 +20,4 @@ client.on("ready", () => {
         }]
     });
 });
-client.login({clientId : "1073762890445766656"}).catch(console.error);
+client.login({clientId: ID}).catch(console.error);
